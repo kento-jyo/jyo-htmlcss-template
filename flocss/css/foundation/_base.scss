@@ -1,0 +1,12 @@
+// 変数の定義（本当は _variable.scss に分けるけど、今回はここにまとめるね）
+$color-primary: #333;
+$color-accent: #007bff;
+$font-main: "Helvetica Neue", Arial, sans-serif;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-main;
+    color: $color-primary;
+    line-height: 1.6;
+}

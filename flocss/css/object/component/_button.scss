@@ -1,0 +1,21 @@
+@use "../../foundation/base" as *;
+
+.c-button {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: $color-accent;
+    color: #fff;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    // Modifier: 色違いパターン
+    &--small {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}

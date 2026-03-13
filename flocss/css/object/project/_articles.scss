@@ -1,0 +1,15 @@
+.p-articles {
+    display: grid;
+    gap: 20px;
+
+    &__item {
+        border: 1px solid #ddd;
+        padding: 15px;
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
