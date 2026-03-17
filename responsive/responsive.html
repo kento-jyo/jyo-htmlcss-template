@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox,Gridを有効活用</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="body">
+  <section class="p-card-list">
+    <div class="p-card-list__inner">
+
+      <article class="p-card-list__item c-card--flexible">
+        <div class="c-card__image">
+          <img src="https://placehold.jp/24/666666/ffffff/800x450.png?text=Responsive+Image" alt="ダミー画像">
+        </div>
+        <div class="c-card__content">
+          <h3 class="c-card__title">サイズが変わるカード</h3>
+          <p class="c-card__text">
+            この要素は画面幅によって width が 300px / 550px / 800px と変化します。
+          </p>
+        </div>
+      </article>
+
+      <article class="p-card-list__item c-card--display-control">
+        <div class="c-card__content">
+          <h3 class="c-card__title">デバイス限定表示</h3>
+
+          <p class="u-pc-only">💻 これはPCサイズ（768px以上）だけで見えます</p>
+
+          <p class="u-sp-only">📱 これはスマホサイズ（767px以下）だけで見えます</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</body>
+
+</html>

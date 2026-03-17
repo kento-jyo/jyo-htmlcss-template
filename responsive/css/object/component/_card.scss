@@ -1,0 +1,47 @@
+.c-card--flexible {
+    background: #fff;
+    border: 1px solid #ddd;
+    overflow: hidden;
+
+    // 1. ここが賢人くんのリクエスト部分！
+    // 399px以下（スマホ小）
+    @media (max-width: 399px) {
+        width: 300px; // 固定幅の学習
+        background-color: #fff0f0; // 変化がわかるように色付け
+    }
+
+    // 400px ~ 767px（スマホ大・タブレット）
+    @media (min-width: 400px) and (max-width: 767px) {
+        width: 400px;
+        background-color: #f0faff;
+    }
+
+    // 768px以上（PC）
+    @media (min-width: 768px) {
+        width: 50rem; // 800px相当（1rem=16pxの場合）
+        max-width: 90%; // 画面からはみ出さない工夫
+        background-color: #f0fff0;
+    }
+
+    img {
+        width: 100%; // 親（c-card--flexible）の幅に合わせる
+        height: auto;
+        display: block;
+    }
+}
+
+//表示・非表示の実装
+// 767px以下なら、PC専用を消す
+@media (max-width: 767px) {
+    .u-pc-only {
+        display: none;
+    }
+}
+
+// 768px以上（PC）なら、スマホ専用を消す
+// ※min-width: 767pxよりも「768px」にする方が境界線が綺麗だよ！
+@media (min-width: 768px) {
+    .u-sp-only {
+        display: none;
+    }
+}
