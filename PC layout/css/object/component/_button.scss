@@ -1,0 +1,20 @@
+@use "../../foundation/base" as *;
+@use "../../layout/main" as *;
+
+nav {
+    grid-area: left;
+    outline: 2px solid rgba(255, 0, 0, 0.5); // 赤色のうっすらした枠線
+    background-color: rgba(255, 200, 200, 0.2); // ほんのり背景色
+}
+
+article {
+    grid-area: center;
+    outline: 2px solid rgba(255, 0, 0, 0.5); // 赤色のうっすらした枠線
+    background-color: rgba(255, 200, 200, 0.2); // ほんのり背景色
+}
+
+aside {
+    grid-area: right;
+    outline: 2px solid rgba(255, 0, 0, 0.5); // 赤色のうっすらした枠線
+    background-color: rgba(255, 200, 200, 0.2); // ほんのり背景色
+}

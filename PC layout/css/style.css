@@ -1,0 +1,94 @@
+@charset "UTF-8";
+body {
+  display: flex;
+  flex-direction: column;
+  outline: 3px dashed blue;
+  /* bodyは青い点線 */
+}
+
+.body {
+  outline: 3px dashed blue;
+}
+
+header {
+  outline: 2px solid rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 200, 200, 0.2);
+  min-height: 50px;
+  height: 100px;
+}
+
+footer {
+  outline: 2px solid rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 200, 200, 0.2);
+  min-height: 50px;
+  height: 100px;
+}
+
+main {
+  display: grid;
+  grid-template: "...... ...... ...... ...... ......" 10px "left   ...... center ...... right" 1fr "...... ...... ...... ...... ......" 10px/150px 10px 150px 10px 150px;
+  min-height: 50vh;
+}
+
+.l-header {
+  grid-area: header;
+}
+
+.left {
+  grid-area: left;
+  background-color: #f99;
+}
+
+.center {
+  grid-area: center;
+  background-color: #9f9;
+}
+
+.right {
+  grid-area: right;
+  background-color: #99f;
+}
+
+.l-footer {
+  grid-area: footer;
+}
+
+nav {
+  grid-area: left;
+  outline: 2px solid rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 200, 200, 0.2);
+}
+
+article {
+  grid-area: center;
+  outline: 2px solid rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 200, 200, 0.2);
+}
+
+aside {
+  grid-area: right;
+  outline: 2px solid rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 200, 200, 0.2);
+}
+
+.p-articles {
+  display: grid;
+  gap: 20px;
+}
+.p-articles__item {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+.p-articles__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.u-mt-20 {
+  margin-top: 20px !important;
+}
+
+.u-mb-40 {
+  margin-bottom: 40px !important;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,16 @@
+// 変数の定義（本当は _variable.scss に分けるけど、今回はここにまとめるね）
+$color-primary: #333;
+$color-accent: #007bff;
+$font-main: "Helvetica Neue", Arial, sans-serif;
+
+body {
+    display: flex;
+    flex-direction: column;
+    outline: 3px dashed blue;
+
+    /* bodyは青い点線 */
+}
+
+.body {
+    outline: 3px dashed blue;
+}

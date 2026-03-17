@@ -1,0 +1,34 @@
+// _header.scss
+// 横にheight、「/」以降にwidthを指定
+main {
+    display: grid;
+    grid-template:
+        "...... ...... ...... ...... ......" 10px
+        "left   ...... center ...... right" 1fr
+        "...... ...... ...... ...... ......" 10px
+        / 150px 10px 150px 10px 150px;
+    min-height: 50vh;
+}
+
+.l-header {
+    grid-area: header;
+}
+
+.left {
+    grid-area: left;
+    background-color: #f99;
+}
+
+.center {
+    grid-area: center;
+    background-color: #9f9;
+}
+
+.right {
+    grid-area: right;
+    background-color: #99f;
+}
+
+.l-footer {
+    grid-area: footer;
+}
