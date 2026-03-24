@@ -1,1 +1,5 @@
-/*# sourceMappingURL=style.css.map */
+.thingy {
+  display: none;
+  opacity: 0;
+  transition: 0.8s;
+}/*# sourceMappingURL=style.css.map */

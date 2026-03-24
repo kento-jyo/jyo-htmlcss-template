@@ -4,3 +4,9 @@ $color-accent: #007bff;
 $font-main: "Helvetica Neue", Arial, sans-serif;
 
 .body {}
+
+.thingy {
+    display: none;
+    opacity: 0;
+    transition: .8s;
+}
