@@ -1,50 +1,83 @@
-.c-card--flexible {
-  background: #fff;
-  border: 1px solid #ddd;
-  overflow: hidden;
-}
-@media (max-width: 399px) {
-  .c-card--flexible {
-    width: 300px;
-    background-color: #fff0f0;
-  }
-}
-@media (min-width: 400px) and (max-width: 767px) {
-  .c-card--flexible {
-    width: 400px;
-    background-color: #f0faff;
-  }
-}
-@media (min-width: 768px) {
-  .c-card--flexible {
-    width: 50rem;
-    max-width: 90%;
-    background-color: #f0fff0;
-  }
-}
-.c-card--flexible img {
-  width: 100%;
-  height: auto;
-  display: block;
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-@media (max-width: 767px) {
-  .u-pc-only {
-    display: none;
-  }
+h1 {
+  font-size: 32px;
+  margin: 0;
+  color: #ffffff;
+  background-color: #000000;
+  display: flex; /* Flexboxを起動 */
+  align-items: center; /* ★上下（垂直）中央！ */
+  justify-content: center; /* 左右（水平）中央！ */
+  height: 100%;
+  width: 100%;
 }
-@media (min-width: 768px) {
-  .u-sp-only {
-    display: none;
-  }
+
+.l-header {
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  position: relative;
 }
-.p-card-list {
-  padding: 2rem 1rem;
-  background-color: #f5f5f5;
+
+.l-main {
+  min-height: 500px;
+  width: 100%;
+  background-color: orange;
+  display: flex; /* Flexboxを起動 */
+  align-items: center; /* ★上下（垂直）中央！ */
+  justify-content: center; /* 左右（水平）中央！ */
 }
-.p-card-list__inner {
+
+.p-hamburger {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  top: 100px;
+  right: 1rem;
+  z-index: 1000;
+}
+.p-hamburger.active {
+  left: 0;
+}
+
+.p-nav-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.p-button__container {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 20px;
+}
+
+.p-hamburger__icon {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 1;
+  filter: invert(1);
+}
+.p-hamburger__icon.active {
+  opacity: 0;
+}
+
+.p-xbutton__icon {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  filter: invert(1);
+}
+.p-xbutton__icon.active {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

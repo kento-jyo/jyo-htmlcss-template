@@ -1,6 +1,22 @@
 // 変数の定義
 $color-primary: #333;
+$color-white: #ffffff;
 $color-accent: #007bff;
 $font-main: "Helvetica Neue", Arial, sans-serif;
 
-.body {}
+body {
+    margin: 0;
+    font-family: $font-main;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0;
+    color: $color-white;
+    background-color: #000000;
+    display: flex;         /* Flexboxを起動 */
+    align-items: center;    /* ★上下（垂直）中央！ */
+    justify-content: center; /* 左右（水平）中央！ */
+    height: 100%;
+    width: 100%;
+}

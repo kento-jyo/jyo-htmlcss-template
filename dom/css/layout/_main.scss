@@ -1,1 +1,10 @@
 // _main.scss
+
+.l-main {
+    min-height: 500px;
+    width: 100%;
+    background-color: orange;
+    display: flex;         /* Flexboxを起動 */
+    align-items: center;    /* ★上下（垂直）中央！ */
+    justify-content: center; /* 左右（水平）中央！ */
+}
