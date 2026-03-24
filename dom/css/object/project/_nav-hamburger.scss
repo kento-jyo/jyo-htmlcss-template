@@ -8,6 +8,7 @@
     top: 100px;
     right: 1rem;
     z-index: 1000;
+    transition: left 0.3s ease-in-out; //メニューをゆったり動かす
 
      &.active {
         left: 0;
@@ -52,6 +53,8 @@
     }
 }
 
-.p-main {
-    
+.p-index {
+    position: absolute;
+    top: 250px;
+    left: 80px;
 }
