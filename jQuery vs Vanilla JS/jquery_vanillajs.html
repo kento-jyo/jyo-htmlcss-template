@@ -4,12 +4,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>modernJS</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="js/main.js" defer></script>
+  <title>jQuery 判断基準テスト</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    section {
+      background: #fff;
+      padding: 30px;
+      margin-bottom: 50px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      border-left: 5px solid #007bff;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* スライダーの調整 */
+    .js-slider img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #666;
+    }
+
+    /* 簡易アニメ用のボックス */
+    .js-target-box {
+      display: none;
+      padding: 20px;
+      background: #e7f3ff;
+      border: 1px solid #b3d7ff;
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+
+    /* スムーススクロール確認用の余白 */
+    .spacer {
+      height: 800px;
+      background: linear-gradient(#fff, #ddd);
+    }
+
+    .p-btn {
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .p-btn:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 
-<body class="body">
+<body>
+
+  <nav>
+    <a href="#section1" class="p-btn">1. プラグイン</a>
+    <a href="#section2" class="p-btn">2. 簡易アニメ</a>
+  </nav>
+
+  <section id="section1">
+    <h2>1. jQueryプラグイン (Slick) の例</h2>
+    <div class="js-slider">
+      <div><img src="https://placehold.jp/24/007bff/ffffff/400x200.png?text=Slide+1" alt="Slide 1"></div>
+      <div><img src="https://placehold.jp/24/28a745/ffffff/400x200.png?text=Slide+2" alt="Slide 2"></div>
+      <div><img src="https://placehold.jp/24/dc3545/ffffff/400x200.png?text=Slide+3" alt="Slide 3"></div>
+    </div>
+    <p style="margin-top:20px;">↑ このスライダーは数行のjQueryだけで動いています。</p>
+  </section>
+
+  <section id="section2">
+    <h2>2. CSS無しで簡易アニメの例</h2>
+    <button class="p-btn js-show-msg">メッセージを表示（fadeIn & slideUp）</button>
+    <div class="js-target-box">
+      JYO社の研修、お疲れ様です！<br>
+      これはjQueryの標準機能だけで「ふわっ」と出て「スルスル」消えています。
+    </div>
+  </section>
+
+  <div class="spacer"></div>
+  <p id="footer">ページ最下部です（スムーススクロール確認用）</p>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="./js/main.js"></script>
 
 </body>
 
