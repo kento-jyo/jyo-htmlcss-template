@@ -1,0 +1,388 @@
+@charset "UTF-8";
+h1 {
+  font-size: 28px; /* スマホでは少し控えめに */
+  margin-left: 20px;
+  animation: fadeInUp 1s;
+}
+
+h2 {
+  font-size: 24px; /* セクションタイトルもスマホサイズ */
+  text-align: center;
+  animation: fadeInUp 1s;
+}
+
+h3 {
+  font-size: 18px;
+  animation: fadeInUp 1s;
+}
+
+p {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 48px; /* 元の40pxから少しアップして迫力を出す */
+    margin-left: 25px;
+  }
+  h2 {
+    font-size: 40px; /* 元の32pxからアップ */
+  }
+  h3 {
+    font-size: 24px; /* 元の18pxからアップ */
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.l-header {
+  top: 25px;
+}
+
+.c-subtitle {
+  text-align: center;
+  animation: fadeInUp;
+  animation-duration: 1s;
+}
+
+.c-card__web {
+  display: flex;
+}
+
+.c-card__sp {
+  display: flex;
+}
+
+.c-card__animation {
+  display: flex;
+}
+
+.c-card__ec {
+  display: flex;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* 最初は透明 */
+    transform: translateY(20px); /* 20px下に下げておく */
+  }
+  to {
+    opacity: 1; /* 最後は表示 */
+    transform: translateY(0); /* 元の位置に戻す */
+  }
+}
+.c-form__item {
+  margin-bottom: 24px;
+}
+
+.c-form__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.c-form__required {
+  background: #ff4b4b; /* 赤色などで「必須」を強調 */
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.c-form__input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* スマホでズームされないための最低サイズ */
+}
+
+.p-top {
+  background: #dddddd;
+  height: 40dvh;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.p-works {
+  display: grid;
+  grid-template: "...... ...... ...... ...... ......" 10px "...... ...... top    ...... ......" auto "...... ...... ...... ...... ......" 30px "...... left   ...... right  ......" auto "...... ...... ...... ...... ......" 50px/5dvw 35dvw 15dvw 35dvw 5dvw;
+  min-height: 50vh;
+  max-width: 95dvw;
+  margin: 0 auto;
+  animation: fadeInUp 1s;
+}
+
+.p-solutions {
+  display: grid;
+  grid-template: "...... ...... ...... ...... ......" 10px "...... ...... top    ...... ......" auto "...... ...... ...... ...... ......" 30px "...... left1  ...... right1 ......" auto "...... ...... ...... ...... ......" 50px "...... left2  ...... right2 ......" auto "...... ...... ...... ...... ......" 50px/5dvw 25dvw 15dvw 25dvw 5dvw;
+  min-height: 50vh;
+  max-width: 75dvw;
+  margin: 0 auto;
+  animation: fadeInUp 1s;
+}
+
+.p-about {
+  display: grid;
+  grid-template: "...... ...... ...... ...... ......" 10px "...... ...... top    ...... ......" auto "...... ...... ...... ...... ......" 50px "...... img1   ...... cent1  ......" auto "...... ...... ...... ...... ......" 20px "...... ...... ...... cent2  ......" auto "...... ...... ...... ...... ......" 50px/13dvw 15dvw 5dvw 40dvw 1dvw;
+  min-height: 50vh;
+  max-width: 74dvw;
+  margin: 0 auto;
+  animation: fadeInUp 1s;
+}
+
+.p-contact {
+  margin: auto 20dvw;
+  animation: fadeInUp 1s;
+}
+
+.p-works__title {
+  grid-area: top;
+  justify-self: center; /* エリア内でブロックを中央に */
+  text-align: center;
+}
+
+.p-selflp {
+  grid-area: left;
+  text-align: center;
+}
+
+.p-schoollp {
+  grid-area: right;
+  text-align: center;
+}
+
+.p-solutions__background {
+  background: #dddddd;
+}
+
+.p-solutions__title {
+  grid-area: top;
+  justify-self: center; /* エリア内でブロックを中央に */
+  text-align: center;
+}
+
+.c-card__web {
+  grid-area: left1;
+}
+
+.c-card__sp {
+  grid-area: left2;
+}
+
+.c-card__animation {
+  grid-area: right1;
+}
+
+.c-card__ec {
+  grid-area: right2;
+}
+
+.p-img__solutions {
+  width: 50%;
+  height: auto;
+  margin-top: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+.p-img__solutions:hover {
+  transform: scale(1.05); /* ホバー時に少し大きくする */
+}
+
+.p-about__title {
+  grid-area: top;
+  /* 「2列目から4列目まで」のように、複数の列をまたぐ指定 */
+  grid-column: 1/6;
+  /* その広い範囲の中で真ん中に寄せる */
+  justify-self: center;
+  text-align: center;
+}
+
+.p-img__about {
+  grid-area: img1;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.p-about__introduction {
+  grid-area: cent1;
+}
+
+.p-about__career {
+  grid-area: cent2;
+}
+
+.p-name {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* 最初は透明 */
+    transform: translateY(20px); /* 20px下に下げておく */
+  }
+  to {
+    opacity: 1; /* 最後は表示 */
+    transform: translateY(0); /* 元の位置に戻す */
+  }
+}
+.p-img__selflp {
+  width: 100%;
+  height: auto;
+}
+
+.p-img__schoollp {
+  width: 100%;
+  height: auto;
+}
+
+.p-img__webicon {
+  width: 90%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid #909090;
+}
+
+.p-img__spicon {
+  width: 90%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid #909090;
+}
+
+.p-img__animationicon {
+  width: 90%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid #909090;
+}
+
+.p-img__ecicon {
+  width: 90%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid #909090;
+}
+
+.p-img__portrait {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.p-hamburger {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  top: 110px;
+  z-index: 1000;
+  transition: right 0.3s ease-in-out;
+}
+.p-hamburger.active {
+  right: 0;
+}
+
+.p-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #fff;
+}
+
+.p-nav__item a {
+  color: #fff;
+}
+
+.p-button__container {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  cursor: pointer; /* マウスを乗せた時に「指マーク」にする */
+  transition: transform 0.2s ease-in-out; /* 0.2秒かけて滑らかに変化させる */
+}
+.p-button__container:hover {
+  transform: scale(1.15); /* ホバー時に1.15倍に大きくする（数字はお好みで！） */
+}
+.p-button__container:active {
+  transform: scale(0.95); /* クリックした瞬間に少し凹ませるとさらにボタンっぽくなるよ！ */
+}
+
+.p-hamburger__icon {
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 1;
+}
+.p-hamburger__icon.active {
+  opacity: 0;
+}
+
+.p-xbutton__icon {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+}
+.p-xbutton__icon.active {
+  opacity: 1;
+}
+
+.p-index {
+  position: absolute;
+  top: 250px;
+  left: 80px;
+}
+
+.p-hamburger__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+}
+.p-hamburger__mask.active {
+  display: block;
+}
+
+body.is-fixed {
+  overflow: hidden;
+}/*# sourceMappingURL=style.css.map */

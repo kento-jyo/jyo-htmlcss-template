@@ -1,0 +1,66 @@
+// 変数の定義
+$color-primary: #333;
+$color-white: #ffffff;
+$color-accent: #007bff;
+$font-main: "Helvetica Neue", Arial, sans-serif;
+
+// --- 基本設定（スマホ版：375px〜 を想定） ---
+h1 {
+    font-size: 28px;      /* スマホでは少し控えめに */
+    margin-left: 20px;
+    animation: fadeInUp 1s;
+}
+
+h2 {
+    font-size: 24px;      /* セクションタイトルもスマホサイズ */
+    text-align: center;
+    animation: fadeInUp 1s;
+}
+
+h3 {
+    font-size: 18px;
+    animation: fadeInUp 1s;
+}
+
+p {
+    font-size: 14px;
+}
+
+// --- タブレット版（768px〜） ---
+@media (min-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+}
+
+// --- PC版（1024px〜：若干大きく調整！） ---
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 48px;  /* 元の40pxから少しアップして迫力を出す */
+        margin-left: 25px;
+    }
+    h2 {
+        font-size: 40px;  /* 元の32pxからアップ */
+    }
+    h3 {
+        font-size: 24px;  /* 元の18pxからアップ */
+    }
+}
+
+// アニメーション（共通）
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

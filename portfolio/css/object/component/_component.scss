@@ -1,0 +1,66 @@
+// _card.scss
+
+.c-subtitle {
+    text-align: center;
+    animation: fadeInUp;
+    animation-duration: 1s;
+}
+
+.c-card__web {
+    display:flex;
+}
+
+.c-card__sp {
+    display:flex;
+}
+
+.c-card__animation {
+    display:flex;
+}
+
+.c-card__ec {
+    display:flex;
+}
+
+
+// アニメーション
+@keyframes fadeInUp {
+        from {
+            opacity: 0;               /* 最初は透明 */
+            transform: translateY(20px); /* 20px下に下げておく */
+        }
+        to {
+            opacity: 1;               /* 最後は表示 */
+            transform: translateY(0);  /* 元の位置に戻す */
+        }
+}
+
+
+// フォーム
+.c-form__item {
+  margin-bottom: 24px;
+}
+
+.c-form__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.c-form__required {
+  background: #ff4b4b; /* 赤色などで「必須」を強調 */
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.c-form__input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* スマホでズームされないための最低サイズ */
+}
